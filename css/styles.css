@@ -54,7 +54,6 @@ h3 {
 }
 
 .section-heading {
-  margin: 12.5rem 0 2.625rem 6.9375rem;
   font-size: 2.25rem;
 }
 
@@ -90,7 +89,16 @@ h3 {
   text-decoration: underline;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 /* Hero Section */
+
+.hero-section {
+  margin-bottom: 12.5rem;
+}
+
 .hero-image {
   width: 100%;
   height: auto;
@@ -184,20 +192,21 @@ input[type="email"] {
 }
 
 /* Services Section */
-#services-section {
+#services {
+  width: min(100%, 69.25rem);
+  margin-inline: auto;
   margin-bottom: 12.125rem;
 }
 
 .services {
   width: min(100%, 21.625rem);
+  margin-bottom: 2.625rem;
 }
 
 .services-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: min(100%, 69.25rem);
-  margin-inline: auto;
 }
 
 .service {
@@ -270,8 +279,10 @@ input[type="email"] {
 
 /* Our Work Section */
 
-#our-work-section {
+#our-work {
   margin-bottom: 13.716875rem;
+  width: min(100%, 69.25rem);
+  margin-inline: auto;
 }
 
 .work {
@@ -283,8 +294,7 @@ input[type="email"] {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(35, 1fr);
-  width: min(100%, 69.25rem);
-  margin-inline: auto;
+  column-gap: 1.25rem;
 }
 
 .portfolio-piece:nth-of-type(1) {
@@ -317,7 +327,14 @@ input[type="email"] {
   cursor: pointer;
 }
 
+.portfolio-image-container {
+  width: 100%;
+  height: auto;
+}
+
 .portfolio-image {
+  width: 100%;
+  height: 100%;
   border-radius: 24px;
   margin-bottom: 1.25rem;
 }
@@ -383,6 +400,11 @@ input[type="email"] {
   gap: 1.5rem;
 }
 
+.team-pictures div {
+  width: auto;
+  height: auto;
+}
+
 .team-picture {
   border-radius: 24px;
 }
@@ -392,19 +414,22 @@ input[type="email"] {
 }
 
 /* Client Section */
-.clients-section {
+#clients {
   width: min(100%, 69.375rem);
+  margin-inline: auto;
+  margin-bottom: 12.5rem;
 }
 
 .testimonial {
   width: min(100%, 58.5625rem);
+  margin-bottom: 3.0625rem;
 }
 
 .client-avatar {
   display: flex;
   gap: 1.875rem;
   align-items: center;
-  margin: 0 0 12.5rem 6.9375rem;
+  margin-bottom: 6.9375rem;
 }
 
 .client-photo {
@@ -522,4 +547,192 @@ input[type="email"] {
 .attribution a:hover {
   color: var(--blue);
   text-decoration: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .header-section {
+    margin: 0.8125rem auto 3rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .upper-text,
+  .lower-text,
+  .mailing-list {
+    margin-left: 40px;
+  }
+
+  .hero-heading {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .hero-emphasized {
+    font-size: 1.5rem;
+  }
+
+  .upper-emphasized {
+    width: min(100%, 17rem);
+    margin-bottom: 0.9375rem;
+  }
+
+  .lower-emphasized {
+    width: min(100%, 14.1875rem);
+    margin: 1.375rem 0 2.0625rem;
+  }
+
+  .hero-paragraph {
+    font-size: 0.75rem;
+    width: min(100%, 17.1875rem);
+    margin-bottom: 1.9375rem;
+  }
+
+  input[type="email"] {
+    font-size: 0.875rem;
+    padding: 0.9375rem 0 0.6875rem 1.1875rem;
+    width: 18.1875rem;
+  }
+
+  .join {
+    font-size: 0.875rem;
+    width: 4.4375rem;
+    height: 2.4375rem;
+  }
+
+  .hero-section {
+    margin-bottom: 6.375rem;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  #services {
+    margin-bottom: 6.4375rem;
+  }
+
+  .services-container {
+    flex-direction: column;
+    gap: 2.3125rem;
+  }
+
+  .services {
+    width: min(100%, 16.1875rem);
+    margin-bottom: 2.6875rem;
+    margin-left: 3.0625rem;
+  }
+
+  #our-work {
+    margin-bottom: 6.25rem;
+  }
+
+  .work {
+    width: min(100%, 16.6875rem);
+    margin-bottom: 3rem;
+    margin-left: 2.8125rem;
+  }
+
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 21.9375rem);
+    column-gap: 2.25rem;
+    margin-inline: auto;
+  }
+
+  .portfolio-piece:nth-of-type(4) {
+    margin-bottom: 2.25rem;
+  }
+
+  .project-type {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+  }
+
+  .project-name {
+    font-size: 1.125rem;
+  }
+
+  .more-text {
+    color: var(--blue);
+    font-size: 1.125rem;
+  }
+
+  .team-section {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 6.25rem;
+    gap: 2.25rem;
+  }
+
+  .team-picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  .testimonial {
+    width: min(100%, 21.9375rem);
+    margin-bottom: 1.125rem;
+    margin-inline: auto;
+  }
+
+  #clients {
+    margin-bottom: 6.25rem;
+  }
+
+  .client-avatar {
+    margin-inline: auto;
+    width: min(100%, 21.9375rem);
+    margin-bottom: 0;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding-top: 2.25rem;
+    gap: 4rem;
+    margin-bottom: 9.625rem;
+    margin-left: 1.71875rem;
+  }
+
+  .links-container {
+    width: min(100%, 28.1875rem);
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .social-media-container {
+    width: min(100%, 28.125rem);
+  }
+
+  .contact-mailing-list {
+    width: min(100%, 27.0625rem);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .upper-text,
+  .lower-text,
+  .mailing-list,
+  .services,
+  .work,
+  .contact-container {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  input[type="email"] {
+    width: 90vw;
+  }
 }
