@@ -89,7 +89,8 @@ h3 {
   text-decoration: underline;
 }
 
-.mobile-menu {
+.mobile-menu,
+#mobile-navigation {
   display: none;
 }
 
@@ -414,6 +415,7 @@ input[type="email"] {
 }
 
 /* Client Section */
+
 #clients {
   width: min(100%, 69.375rem);
   margin-inline: auto;
@@ -449,6 +451,7 @@ input[type="email"] {
 }
 
 /* Footer Section */
+
 .footer-section {
   background-color: var(--black);
   padding-bottom: 1.5rem;
@@ -559,6 +562,63 @@ input[type="email"] {
     display: block;
   }
 
+  .mobile-menu:hover {
+    cursor: pointer;
+  }
+
+  #mobile-navigation {
+    position: fixed;
+    top: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--white);
+    padding: 1.25rem 1.890625rem;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+    z-index: 10;
+  }
+
+  #mobile-navigation.open {
+    transform: translateX(0);
+  }
+
+  .mobile-nav-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .close:hover {
+    cursor: pointer;
+  }
+
+  .mobile-nav-links {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-nav-links ul {
+    list-style-type: none;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin: 0 auto 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    color: var(--gray1);
+    text-decoration: none;
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--blue);
+    text-decoration: underline;
+  }
+
   .header-section {
     margin: 0.8125rem auto 3rem;
   }
@@ -643,14 +703,6 @@ input[type="email"] {
     margin-left: 2.8125rem;
   }
 
-  .portfolio-container {
-    display: flex;
-    flex-direction: column;
-    width: min(100%, 21.9375rem);
-    column-gap: 2.25rem;
-    margin-inline: auto;
-  }
-
   .portfolio-piece:nth-of-type(4) {
     margin-bottom: 2.25rem;
   }
@@ -717,6 +769,16 @@ input[type="email"] {
 
   .contact-mailing-list {
     width: min(100%, 27.0625rem);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 21.9375rem);
+    column-gap: 2.25rem;
+    margin-inline: auto;
   }
 }
 
