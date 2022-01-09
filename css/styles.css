@@ -474,19 +474,23 @@ input[type="email"] {
 }
 
 .contact-link {
-  color: var(--white);
-  font-weight: 400;
   font-size: 1.125rem;
   margin-bottom: 0.703125rem;
+}
+
+.contact-link a {
+  color: var(--white);
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .contact-link:last-of-type {
   margin-bottom: 0;
 }
 
-.contact-link:hover {
+.contact-link a:hover {
   color: var(--blue);
-  cursor: pointer;
+  text-decoration: underline;
 }
 
 .social-media-container {
